@@ -7,5 +7,10 @@ node default {
   }
 }
 node 'master.puppet.vm' {
-  include role::master_server
+  file{'/root/test':
+            ensure =>file,
+            content=>" done"
+            }
+            
+            
 }
