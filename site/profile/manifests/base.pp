@@ -1,5 +1,8 @@
 class profile::base{
-  user {'admin':
-          ensure=> present,
-          }
-    }
+ 
+    file { '/root/README2':
+    ensure => file,
+    content => 'This is a readme2',
+    owner   => 'root',
+  }
+}
